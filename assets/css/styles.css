@@ -1,3 +1,9 @@
+/* ============================================================
+   PHOTOGRAPHY WEBSITE — style.css
+   Aesthetic: airy sage & cream, soft editorial
+   Fonts: Cormorant Garamond (display) + DM Sans (body)
+   ============================================================ */
+
 /* --- Google Fonts Import --- */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
 
@@ -5,13 +11,13 @@
    CSS VARIABLES
    ============================================================ */
 :root {
-  --cream:        #f5f0e8;
-  --warm-white:   #faf8f4;
-  --stone:        #c4b49a;
-  --taupe:        #9c8870;
-  --bark:         #5c4a36;
-  --charcoal:     #2a2420;
-  --ink:          #1a1410;
+  --cream:        #f7f5f0;
+  --warm-white:   #fdfcfa;
+  --stone:        #a8b8a8;
+  --taupe:        #7a9478;
+  --bark:         #537352;
+  --charcoal:     #475a47;
+  --ink:          #1a2419;
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body:    'DM Sans', sans-serif;
@@ -43,7 +49,6 @@ body {
   font-weight: 300;
   line-height: 1.7;
   overflow-x: hidden;
-  cursor: none; /* custom cursor */
 }
 
 img {
@@ -58,30 +63,7 @@ a {
   text-decoration: none;
 }
 
-/* ============================================================
-   CUSTOM CURSOR
-   ============================================================ */
-.cursor {
-  position: fixed;
-  top: 0; left: 0;
-  width: 10px; height: 10px;
-  background: var(--bark);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s var(--ease-out-expo),
-              width 0.4s var(--ease-out-expo),
-              height 0.4s var(--ease-out-expo),
-              background 0.3s ease;
-  mix-blend-mode: multiply;
-}
 
-.cursor.expanded {
-  width: 40px;
-  height: 40px;
-  background: var(--stone);
-}
 
 /* ============================================================
    PAGE LOADER
@@ -1068,7 +1050,4 @@ footer {
   .gallery-masonry { columns: 1; }
   .gallery-grid { grid-template-columns: 1fr; }
   .gallery-grid .g-item { aspect-ratio: 4/3; }
-
-  body { cursor: auto; }
-  .cursor { display: none; }
 }
