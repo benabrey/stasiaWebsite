@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Aesthetics By Stasia</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+
+  <div class="page-transition"></div>
+  <div class="cursor"></div>
+  <div class="loader">
+    <span class="loader-text">Aesthetics By Stasia</span>
+  </div>
+
+  <!-- NAV -->
+  <nav class="always-visible">
+    <a href="/index.html" class="nav-logo">Aesthetics By Stasia</a>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/gallery.html">Gallery</a></li>
+      <li><a href="/contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="contact-hero-bg">
+      <img src="/assets/images/contact-hero.jpg" alt="Contact" />
+    </div>
+    <div class="contact-hero-content reveal">
+      <p class="section-label" style="color:var(--stone)">Get in Touch</p>
+      <h1 class="section-title" style="color:var(--warm-white)">Let's create<br><em>something beautiful</em></h1>
+    </div>
+  </section>
+
+  <!-- CONTACT BODY -->
+  <div class="contact-section">
+
+    <p class="contact-intro reveal">
+      I'd love to hear about your vision. Fill out the form below and I'll
+      be in touch within 48 hours.
+    </p>
+
+    <!-- Contact info strip -->
+    <div class="stagger" style="margin-bottom: 3rem; display:flex; flex-direction:column; gap:0.6rem;">
+      <p style="font-size:0.8rem; letter-spacing:0.15em; color:var(--taupe)">
+        <span style="color:var(--stone); text-transform:uppercase; font-size:0.65rem; letter-spacing:0.3em;">Email&nbsp;&nbsp;</span>
+        <a href="mailto:aestheticsbystasia@gmail.com" style="color:var(--charcoal);">aestheticsbystasia@gmail.com</a>
+      </p>
+      <p style="font-size:0.8rem; letter-spacing:0.15em; color:var(--taupe)">
+        <span style="color:var(--stone); text-transform:uppercase; font-size:0.65rem; letter-spacing:0.3em;">Location&nbsp;&nbsp;</span>
+        Kelowna, BC
+      </p>
+    </div>
+
+    <!-- Form -->
+    <form class="contact-form reveal" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="name">Your Name</label>
+          <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="jane@email.com" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="service">Type of Session</label>
+        <select class="form-select" id="service" name="service">
+          <option value="">Select one</option>
+          <option value="wedding">Wedding</option>
+          <option value="elopement">Elopement</option>
+          <option value="couples">Couples</option>
+          <option value="portraits">Portraits</option>
+          <option value="event">Event</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="subject">Subject</label>
+        <input class="form-input" type="text" id="subject" name="subject" placeholder="Booking inquiry, question, etc." required />
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="message">Tell me about you</label>
+        <textarea class="form-textarea" id="message" name="message" placeholder="Your story, date, vision..."></textarea>
+      </div>
+      <button type="submit" class="submit-btn"><span>Send Message</span></button>
+    </form>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Aesthetics By Stasia</div>
+    <div class="footer-copy">&copy; 2025 Aesthetics By Stasia. All rights reserved.</div>
+    <div class="footer-social">
+      <a href="https://instagram.com/aestheticbystasiaphotography">Instagram</a>
+      <a href="https://pinterest.com/">Pinterest</a>
+    </div>
+  </footer>
+
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>

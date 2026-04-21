@@ -213,4 +213,12 @@ document.addEventListener('DOMContentLoaded', () =>{
             },1500);
         }
     });
+
+    // Auto-filter from URL param (e.g. gallery.html?filter=portrait)
+const params = new URLSearchParams(window.location.search);
+const preFilter = params.get('filter');
+if (preFilter) {
+  const btn = document.querySelector(`.filter-btn[data-filter="${preFilter}"]`);
+  if (btn) btn.click();
+}
 });

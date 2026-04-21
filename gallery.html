@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Aesthetics By Stasia</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+
+  <div class="page-transition"></div>
+  <div class="cursor"></div>
+  <div class="loader">
+    <span class="loader-text">Aesthetics By Stasia</span>
+  </div>
+
+  <!-- NAV -->
+  <nav class="always-visible">
+    <a href="/index.html" class="nav-logo">Aesthetics By Stasia</a>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/gallery.html" class="active">Gallery</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="gallery-page-hero">
+    <div class="hero-bg">
+      <img src="/assets/images/gallery-hero.jpg" alt="Gallery" />
+    </div>
+    <div class="hero-content reveal-left">
+      <p class="section-label" style="color:var(--stone)">Portfolio</p>
+      <h1 class="section-title" style="color:var(--warm-white)">Explore My<br><em>Latest Work</em></h1>
+    </div>
+  </section>
+
+  <!-- FILTER BUTTONS -->
+  <div class="gallery-filter stagger">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="portrait">Portraits</button>
+    <button class="filter-btn" data-filter="event">Events</button>
+    <button class="filter-btn" data-filter="product">Products</button>
+  </div>
+
+  <!-- MASONRY GRID -->
+  <div class="gallery-masonry">
+    <div class="masonry-item" data-category="portrait">
+      <img src="/assets/images/placeholder-1.jpg" alt="Professional Portrait" />
+    </div>
+    <div class="masonry-item" data-category="event">
+      <img src="/assets/images/placeholder-2.jpg" alt="Wedding Photography" />
+    </div>
+    <div class="masonry-item" data-category="product">
+      <img src="/assets/images/placeholder-3.jpg" alt="Product Showcase" />
+    </div>
+    <div class="masonry-item" data-category="portrait">
+      <img src="/assets/images/placeholder-4.jpg" alt="Fashion Portrait" />
+    </div>
+    <div class="masonry-item" data-category="event">
+      <img src="/assets/images/placeholder-5.jpg" alt="Birthday Celebration" />
+    </div>
+    <div class="masonry-item" data-category="product">
+      <img src="/assets/images/placeholder-6.jpg" alt="Product Details" />
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox">
+    <img class="lightbox-img" src="" alt="Full size" />
+    <button class="lightbox-close">Close ×</button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Aesthetics By Stasia</div>
+    <div class="footer-copy">&copy; 2025 Aesthetics By Stasia. All rights reserved.</div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/aestheticbystasiaphotography">Instagram</a>
+      <a href="https://pinterest.com/">Pinterest</a>
+    </div>
+  </footer>
+
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>
