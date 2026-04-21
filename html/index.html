@@ -1,69 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aesthetics By Stasia - Photography</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aesthetics By Stasia - Photography</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">Aesthetics By Stasia</div>
-            <ul class="nav-links">
-                <li><a href="/html/index.html" class="active">Home</a></li>
-                <li><a href="/html/gallery.html">Gallery</a></li>
-                <li><a href="/html/contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Aesthetics By Stasia</h1>
-            <p>Capturing Moments, Creating Memories</p>
-            <a href="html/gallery.html" class="cta-button">View Gallery</a>
-        </div>
-    </header>
+  <!-- Page transition overlay -->
+  <div class="page-transition"></div>
 
-    <section class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Portrait Photography</h3>
-                    <p>Professional portrait sessions with high-quality prints and digital copies.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Event Photography</h3>
-                    <p>Capture your special moments at weddings, birthdays, and celebrations.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Product Photography</h3>
-                    <p>Showcase your products with stunning visual content for your business.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Custom cursor -->
+  <div class="cursor"></div>
 
-    <section class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hi! I'm Stasia, a passionate photographer dedicated to capturing the beauty in every moment.  I specialize in creating timeless images that tell your unique story.</p>
-        </div>
-    </section>
+  <!-- Loader -->
+  <div class="loader">
+    <span class="loader-text">Aesthetics By Stasia</span>
+  </div>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Aesthetics By Stasia. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" class="social-icon">Instagram</a>
-                <a href="#" class="social-icon">Facebook</a>
-                <a href="#" class="social-icon">Twitter</a>
-            </div>
-        </div>
-    </footer>
+  <!-- NAV -->
+  <nav>
+    <a href="/html/index.html" class="nav-logo">Aesthetics By Stasia</a>
+    <ul class="nav-links">
+      <li><a href="/html/index.html" class="active">Home</a></li>
+      <li><a href="html/gallery.html">Gallery</a></li>
+      <li><a href="html/contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <script src="assets/js/script.js"></script>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="assets/images/hero.jpg" alt="Hero" />
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Kelowna, BC</p>
+      <h1 class="hero-title">Love Stories &amp;<br><em>Beautiful Moments</em></h1>
+      <p class="hero-sub">Lifestyle · Couples · Weddings</p>
+      <a href="html/gallery.html" class="hero-cta"><span>View Gallery</span></a>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="services-inner">
+      <p class="section-label reveal">What I Offer</p>
+      <h2 class="section-title reveal">The <em>Experience</em></h2>
+      <div class="services-grid stagger">
+        <div class="service-item">
+          <div class="service-num">01</div>
+          <div class="service-name">Portrait Shoots</div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">02</div>
+          <div class="service-name">Couples Photography</div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">03</div>
+          <div class="service-name">Weddings &amp; Events</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section>
+    <div class="about reveal">
+      <div class="about-image-wrap">
+        <img src="assets/images/about.jpg" alt="Stasia" />
+      </div>
+      <div class="about-text">
+        <p class="section-label">About Me</p>
+        <h2 class="section-title">Your<br><em>Photographer</em></h2>
+        <p class="about-body">
+          Blah blah blah blah blah.
+        </p>
+        <a href="html/gallery.html" class="hero-cta"><span>View My Work</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE STRIP -->
+  <section class="quote-strip">
+    <div class="quote-inner reveal">
+      <div class="quote-mark">"</div>
+      <p class="quote-text">She captured exactly who we are — warm, real, and full of love.</p>
+      <span class="quote-attr">— A Happy Client</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Aesthetics By Stasia</div>
+    <div class="footer-copy">&copy; 2025 Aesthetics By Stasia. All rights reserved.</div>
+    <div class="footer-social">
+      <a href="https://instagram.com/aestheticbystasiaphotography">Instagram</a>
+      <a href="https://pinterest.com/">Pinterest</a>
+    </div>
+  </footer>
+
+  <script src="/assets/js/script.js"></script>
 </body>
 </html>
