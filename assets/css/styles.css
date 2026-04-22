@@ -242,8 +242,7 @@ nav.always-visible .nav-links a {
   }
 
   .hero-left {
-    padding-bottom: 3.5rem;
-    justify-content: flex-end;
+    padding-left:3.5rem;
   }
 
   .hero-title {
@@ -256,13 +255,11 @@ nav.always-visible .nav-links a {
   }
 
   .hero-sub {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .hero-cta {
-    animation: none;
-    opacity: 1;
-    transform: none;
+    padding: 0.65rem 1.8rem;
   }
 
   .scroll-hint {
