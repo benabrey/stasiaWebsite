@@ -232,9 +232,9 @@ nav.always-visible .nav-links a {
   }
 
   section.hero {
-    height: 100vh;
+    height: 110vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 48% 52%;
+    grid-template-rows: 50% 50%;
   }
 
   .hero-right {
