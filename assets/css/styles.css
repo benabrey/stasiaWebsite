@@ -242,7 +242,7 @@ nav.always-visible .nav-links a {
   }
 
   .hero-left {
-    padding-bottom: 2.5rem;
+    padding-bottom: 3.5rem;
     justify-content: flex-end;
   }
 
@@ -266,7 +266,7 @@ nav.always-visible .nav-links a {
   }
 
   .scroll-hint {
-    display: none;
+    display: none !important;
   }
 }
 /* ============================================================
