@@ -33,6 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (href === currentPage) link.classList.add('active');
   });
 
+  // HAMBURGER MENU
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  navToggle?.addEventListener('click', () => {
+    navToggle.classList.toggle('open');
+    navLinks.classList.toggle('open');
+});
   // ============================================================
   // 3. SCROLL REVEAL
   // ============================================================
