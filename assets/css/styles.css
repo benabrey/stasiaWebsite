@@ -749,7 +749,24 @@ section {
 }
 
 .about-section {
-  background: #a5b988;
+  position: relative;
+  background-image: url('/assets/images/og-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(232, 239, 232, 0.85);
+  pointer-events: none;
+}
+
+.about-section .about {
+  position: relative;
+  z-index: 1;
 }
 
 /* ============================================================
