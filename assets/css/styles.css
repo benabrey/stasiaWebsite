@@ -236,6 +236,15 @@ nav.always-visible .nav-links a {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
+
+  .hero-right {
+    order: -1;
+  }
+
+  .hero-left {
+    justify-content: flex-start;
+    padding: 1.5rem 1.5rem 2.5rem;
+  }
 }
 /* ============================================================
    HERO — SPLIT LAYOUT
