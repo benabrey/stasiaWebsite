@@ -72,25 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 6000);
   }
 
-  // ============================================================
-  // 5. PARALLAX — hero right panel
-  // ============================================================
-  const heroRight = document.querySelector('.hero-right');
-
-  if (heroRight) {
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      const activeSlide = heroRight.querySelector('.hero-slide.active img');
-      if (activeSlide && scrollY < window.innerHeight) {
-        activeSlide.style.transform = `scale(1) translateY(${scrollY * 0.15}px)`;
-      }
-    }, { passive: true });
-  }
-
-  // ============================================================
-  // 6. GALLERY FILTER
-  // ============================================================
-  // ============================================================
+// ============================================================
 // 6. GALLERY FILTER
 // ============================================================
 const filterBtns = document.querySelectorAll('.filter-btn');
