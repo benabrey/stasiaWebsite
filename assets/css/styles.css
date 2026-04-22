@@ -234,7 +234,7 @@ nav.always-visible .nav-links a {
   section.hero {
     height: 110vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 42% 58%;
+    grid-template-rows: 63% 37%;
   }
 
   .hero-right {
@@ -242,9 +242,8 @@ nav.always-visible .nav-links a {
   }
 
   .hero-left {
-    justify-content: center;
-    padding: 1.2rem 1.5rem 1.5rem;
-    gap: 0;
+    justify-content: flex-end;
+    padding: 0 1.5rem 1.5rem;
   }
 
   .hero-title {
@@ -254,12 +253,12 @@ nav.always-visible .nav-links a {
 
   .hero-eyebrow {
     font-size: 0.6rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
   }
 
   .hero-sub {
     font-size: 0.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
   }
 
   .hero-cta {

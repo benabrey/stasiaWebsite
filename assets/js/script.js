@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (loader) {
     window.addEventListener('load', () => {
       setTimeout(() => loader.classList.add('hidden'), 600);
+      
     });
   }
 
@@ -140,28 +141,36 @@ if (preFilter) {
   }
 
   // ============================================================
-  // 8. PAGE TRANSITIONS
-  // ============================================================
-  const overlay = document.querySelector('.page-transition');
+// 8. PAGE TRANSITIONS
+// ============================================================
+const overlay = document.querySelector('.page-transition');
 
-  if (overlay) {
-    overlay.classList.add('exiting');
-    setTimeout(() => overlay.classList.remove('exiting'), 700);
+if (overlay) {
+  overlay.classList.add('exiting');
+  setTimeout(() => overlay.classList.remove('exiting'), 700);
 
-    document.querySelectorAll('a[href]').forEach(link => {
-      const href = link.getAttribute('href');
-      const isInternal = href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto');
+  window.addEventListener('pageshow', (e) => {
+    if (e.persisted) {
+      overlay.classList.remove('entering');
+      overlay.classList.remove('exiting');
+    }
+  });
 
-      if (isInternal) {
-        link.addEventListener('click', e => {
-          e.preventDefault();
-          overlay.classList.add('entering');
-          setTimeout(() => { window.location.href = href; }, 600);
-        });
-      }
-    });
-  }
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    const isInternal = href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto');
 
+    if (isInternal) {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        overlay.classList.add('entering');
+        setTimeout(() => { window.location.href = href; }, 600);
+      });
+    }
+  });
+}
+
+  
   // ============================================================
   // 9. CONTACT FORM
   // ============================================================
