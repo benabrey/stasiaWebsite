@@ -256,7 +256,11 @@ nav.always-visible .nav-links a {
     left: 75%;
   }
 
-
+  .hero-cta {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 /* ============================================================
    HERO — SPLIT LAYOUT
