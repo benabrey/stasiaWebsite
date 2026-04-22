@@ -231,10 +231,10 @@ nav.always-visible .nav-links a {
     display: flex;
   }
 
-  section.hero{
+  section.hero {
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 55% 45%;
+    grid-template-rows: 50% 50%;
   }
 
   .hero-right {
@@ -247,18 +247,28 @@ nav.always-visible .nav-links a {
     overflow: hidden;
   }
 
-  .hero-title{
-        font-size: clamp(2rem, 8vw, 3rem);
-
+  .hero-title {
+    font-size: 1.8rem;
   }
 
-  .scroll-hint{
-    left: 75%;
+  .hero-eyebrow {
+    font-size: 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-sub {
+    margin-bottom: 1.5rem;
   }
 
   .hero-cta {
     animation: none;
     opacity: 1;
+    transform: none;
+  }
+
+  .scroll-hint {
+    left: auto;
+    right: 2rem;
     transform: none;
   }
 }
