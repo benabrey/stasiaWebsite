@@ -234,7 +234,7 @@ nav.always-visible .nav-links a {
   section.hero {
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 45% 55%;
   }
 
   .hero-right {
