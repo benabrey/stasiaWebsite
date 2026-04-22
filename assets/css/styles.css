@@ -230,6 +230,12 @@ nav.always-visible .nav-links a {
   .nav-links.open {
     display: flex;
   }
+
+  section.hero{
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 /* ============================================================
    HERO — SPLIT LAYOUT
