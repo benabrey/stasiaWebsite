@@ -243,8 +243,20 @@ nav.always-visible .nav-links a {
 
   .hero-left {
     justify-content: center;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem;
+    overflow: hidden;
   }
+
+  .hero-title{
+        font-size: clamp(2rem, 8vw, 3rem);
+
+  }
+
+  .scroll-hint{
+    left: 75%;
+  }
+
+
 }
 /* ============================================================
    HERO — SPLIT LAYOUT
