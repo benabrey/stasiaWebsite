@@ -10,20 +10,20 @@
   <meta name="keywords" content="Kelowna photographer, Kelowna wedding photographer, Okanagan photographer, couples photography Kelowna, portrait photographer Kelowna, West Kelowna photographer, elopement photographer BC">
   <meta name="author" content="Stasia">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://aestheticsbystasia.com/contact.html">
+  <link rel="canonical" href="https://aestheticsbystasiaphotography.com/contact.html">
 
   <!-- Open Graph (Facebook, Instagram link previews) -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://aestheticsbystasia.com/">
+  <meta property="og:url" content="https://aestheticsbystasiaphotography.com/">
   <meta property="og:title" content="Aesthetics By Stasia | Kelowna Wedding & Couples Photographer">
   <meta property="og:description" content="Airy, cinematic photography for couples, weddings, and portraits in Kelowna and the Okanagan.">
-  <meta property="og:image" content="https://aestheticsbystasia.com/assets/images/og-image.jpg">
+  <meta property="og:image" content="https://aestheticsbystasiaphotography.com/assets/images/og-image.jpg">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Aesthetics By Stasia | Kelowna Wedding & Couples Photographer">
   <meta name="twitter:description" content="Airy, cinematic photography for couples, weddings, and portraits in Kelowna and the Okanagan.">
-  <meta name="twitter:image" content="https://aestheticsbystasia.com/assets/images/og-image.jpg">
+  <meta name="twitter:image" content="https://aestheticsbystasiaphotography.com/assets/images/og-image.jpg">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico">
@@ -77,7 +77,7 @@
     <div class="stagger" style="margin-bottom: 3rem; display:flex; flex-direction:column; gap:0.6rem;">
       <!-- <p style="font-size:0.8rem; letter-spacing:0.15em; color:var(--taupe)">
         <span style="color:var(--stone); text-transform:uppercase; font-size:0.65rem; letter-spacing:0.3em;">Email&nbsp;&nbsp;</span>
-        <a href="mailto:aestheticsbystasia@gmail.com" style="color:var(--charcoal);">aestheticsbystasia@gmail.com</a>
+        <a href="mailto:aestheticsbystasiaphotography@gmail.com" style="color:var(--charcoal);">aestheticsbystasiaphotography@gmail.com</a>
       </p> -->
       <p style="font-size:0.8rem; letter-spacing:0.15em; color:var(--taupe)">
         <span style="color:var(--stone); text-transform:uppercase; font-size:0.65rem; letter-spacing:0.3em;">Location&nbsp;&nbsp;</span>
@@ -86,7 +86,7 @@
     </div>
 
     <!-- Form -->
-    <form class="contact-form reveal" id="contactForm">
+    <form class="contact-form reveal" id="contactForm" netlify name="contact">
       <div class="form-row">
         <div class="form-group">
           <label class="form-label" for="name">Your Name</label>
@@ -117,8 +117,8 @@
         <textarea class="form-textarea" id="message" name="message" placeholder="Your story, date, vision..."></textarea>
       </div>
       <button type="submit" class="submit-btn"><span>Send Message</span></button>
+      <input type="hidden" name="form-name" value="contact" />
     </form>
-
   </div>
 
   <!-- FOOTER -->

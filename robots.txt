@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aestheticsbystasia.com/sitemap.xml
+Sitemap: https://aestheticsbystasiaphotography.com/sitemap.xml
