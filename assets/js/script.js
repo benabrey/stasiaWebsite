@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 // ============================================================
-// 6. GALLERY FILTER
+// 5. GALLERY FILTER
 // ============================================================
 const filterBtns = document.querySelectorAll('.filter-btn');
 const masonryItems = document.querySelectorAll('.masonry-item');
@@ -115,7 +115,7 @@ if (preFilter) {
 
 
   // ============================================================
-  // 7. LIGHTBOX
+  // 6. LIGHTBOX
   // ============================================================
   const lightbox    = document.querySelector('.lightbox');
   const lightboxImg = document.querySelector('.lightbox-img');
@@ -141,7 +141,7 @@ if (preFilter) {
   }
 
   // ============================================================
-// 8. PAGE TRANSITIONS
+// 7. PAGE TRANSITIONS
 // ============================================================
 const overlay = document.querySelector('.page-transition');
 
