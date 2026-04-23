@@ -169,25 +169,4 @@ if (overlay) {
     }
   });
 }
-
-  
-  // ============================================================
-  // 9. CONTACT FORM
-  // ============================================================
-  const form = document.querySelector('.contact-form');
-  const submitBtn = form?.querySelector('.submit-btn span');
-
-  form?.addEventListener('submit', e => {
-    e.preventDefault();
-    if (submitBtn) {
-      submitBtn.textContent = 'Sending…';
-      setTimeout(() => {
-        submitBtn.textContent = 'Sent ✓';
-        setTimeout(() => {
-          submitBtn.textContent = 'Send Message';
-          form.reset();
-        }, 3000);
-      }, 1500);
-    }
-  });
 });
