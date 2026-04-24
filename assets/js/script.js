@@ -64,12 +64,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const slides = document.querySelectorAll('.hero-slide');
 
   if (slides.length > 1) {
-    let current = 0;
+    // shuffle slides
+    const slideArray = [...slides];
+    const parent = slideArray[0].parentNode;
+    slideArray.sort(() => Math.random() - 0.5);
+    slideArray.forEach(slide => parent.appendChild(slide));
 
+    // make first one active
+    document.querySelectorAll('.hero-slide').forEach(s => s.classList.remove('active'));
+    document.querySelector('.hero-slide').classList.add('active');
+
+    let current = 0;
+    const shuffled = document.querySelectorAll('.hero-slide');
     setInterval(() => {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
+      shuffled[current].classList.remove('active');
+      current = (current + 1) % shuffled.length;
+      shuffled[current].classList.add('active');
     }, 6000);
   }
 

@@ -824,7 +824,7 @@ section {
    GALLERY PAGE
    ============================================================ */
 .gallery-page-hero {
-  height: 45svh;
+  height: 60svh;
   min-height: 300px;
   background: var(--bark);
   display: flex;
@@ -963,7 +963,7 @@ section {
    CONTACT PAGE
    ============================================================ */
 .contact-hero {
-  height: 40vh;
+  height: 60vh;
   min-height: 300px;
   background: var(--bark);
   display: flex;
