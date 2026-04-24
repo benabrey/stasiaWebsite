@@ -752,8 +752,8 @@ section {
   position: relative;
   background-image: url('/assets/images/stasiaLandscape.JPG');
   background-size: cover;
-  background-position: center top;
-  background-attachment: scroll;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .about-section::before {
@@ -1265,6 +1265,11 @@ footer {
   .pricing-row {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+  .about-section {
+    background-size: cover;
+    background-position: center top;
+    background-attachment: scroll;
   }
 }
 
