@@ -752,8 +752,8 @@ section {
   position: relative;
   background-image: url('/assets/images/stasiaLandscape.JPG');
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: center top;
+  background-attachment: scroll;
 }
 
 .about-section::before {
@@ -1238,7 +1238,7 @@ footer {
   }
 
   .about-image-wrap {
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/4;
   }
 
   .services-grid {
