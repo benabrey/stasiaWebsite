@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
       shuffled[current].classList.remove('active');
       current = (current + 1) % shuffled.length;
       shuffled[current].classList.add('active');
-    }, 4000);
+    }, 3000);
   }
 
 // ============================================================
