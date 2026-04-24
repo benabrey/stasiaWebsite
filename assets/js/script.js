@@ -179,4 +179,22 @@ if (overlay) {
     }
   });
 }
+
+// ============================================================
+  // 8. CONTACT FORM SUCCESS
+  // ============================================================
+  const form = document.querySelector('.contact-form');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+      if (res.ok) {
+        form.innerHTML = '<p style="font-family:var(--font-display);font-size:1.5rem;font-style:italic;color:var(--taupe);text-align:center;padding:3rem 0;">Thank you! I\'ll be in touch within 48 hours.</p>';
+      }
+    });
+  }
 });
