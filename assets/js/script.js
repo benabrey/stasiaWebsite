@@ -197,4 +197,28 @@ if (overlay) {
       }
     });
   }
+
+  // ===========================================================
+    // 9. Optional fields for Weddings/Events    
+    // ===========================================================
+    const service = document.getElementById('service');
+
+    const serviceGroup = service.closest('.form-group');
+    serviceGroup.insertAdjacentHTML('afterend', `
+      <div class="form-row" id="event-fields" style="display:none">
+        <div class="form-group">
+          <label class="form-label" for="event-date">Date</label>
+          <input class="form-input" type="date" id="event-date" name="event_date" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="event-location">Location</label>
+          <input class="form-input" type="text" id="event-location" name="event_location" placeholder="Venue or city" />
+        </div>
+      </div>
+    `);
+
+    service.addEventListener('change', () => {
+      const show = ['wedding', 'event'].includes(service.value);
+      document.getElementById('event-fields').style.display = show ? 'flex' : 'none';
+    });
 });

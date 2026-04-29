@@ -750,7 +750,7 @@ section {
 
 .about-section {
   position: relative;
-  background-image: url('/assets/images/stasiaLandscape.JPG');
+  background-image: url('/assets/images/stasiaLandscape.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
