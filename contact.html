@@ -4,6 +4,17 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    /></noscript>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -82,12 +93,13 @@
         <span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/index.html" class="active">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
         <li><a href="/gallery.html">Gallery</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/contact.html" class="active">Contact</a></li>
         <li><a href="/pricing.html">Pricing</a></li>
       </ul>
     </nav>
+    <main>
 
     <!-- HERO -->
     <section class="contact-hero">
@@ -214,7 +226,7 @@
         <input type="hidden" name="to" value="aestheticsbystasia@gmail.com" />
       </form>
     </div>
-
+    </main>
     <!-- FOOTER -->
     <footer>
       <div class="footer-logo">Aesthetics By Stasia</div>
@@ -235,6 +247,6 @@
       </div>
     </footer>
 
-    <script src="/assets/js/script.min.js"></script>
+    <script src="/assets/js/script.min.js" defer></script>
   </body>
 </html>
