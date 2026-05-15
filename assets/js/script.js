@@ -203,22 +203,48 @@ if (overlay) {
     // ===========================================================
     const service = document.getElementById('service');
 
-    const serviceGroup = service.closest('.form-group');
-    serviceGroup.insertAdjacentHTML('afterend', `
-      <div class="form-row" id="event-fields" style="display:none">
+    if(service){
+      const serviceGroup = service.closest('.form-group');
+      serviceGroup.insertAdjacentHTML('afterend', `
+        <div class="form-row" id="event-fields" style="display:none">
         <div class="form-group">
-          <label class="form-label" for="event-date">Date</label>
-          <input class="form-input" type="date" id="event-date" name="event_date" />
+        <label class="form-label" for="event-date">Date</label>
+        <input class="form-input" type="date" id="event-date" name="event_date" />
         </div>
         <div class="form-group">
-          <label class="form-label" for="event-location">Location</label>
-          <input class="form-input" type="text" id="event-location" name="event_location" placeholder="Venue or city" />
+        <label class="form-label" for="event-location">Location</label>
+        <input class="form-input" type="text" id="event-location" name="event_location" placeholder="Venue or city" />
         </div>
-      </div>
-    `);
+        </div>
+        `);
+        
+        service.addEventListener('change', () => {
+          const show = ['wedding', 'event'].includes(service.value);
+          document.getElementById('event-fields').style.display = show ? 'flex' : 'none';
+        });
+      }
 
-    service.addEventListener('change', () => {
-      const show = ['wedding', 'event'].includes(service.value);
-      document.getElementById('event-fields').style.display = show ? 'flex' : 'none';
-    });
+    // ============================================================
+    // 10. HEART CURSOR
+    // ============================================================
+    const heartCursor = document.getElementById('heartCursor');
+
+    if (heartCursor && window.innerWidth > 600) {
+      document.body.style.cursor = 'none';
+
+      document.addEventListener('mousemove', e => {
+        heartCursor.style.left = e.clientX + 'px';
+        heartCursor.style.top  = e.clientY + 'px';
+      });
+
+      document.addEventListener('click', e => {
+        const burst = document.createElement('div');
+        burst.className = 'click-heart';
+        burst.textContent = '♥';
+        burst.style.left = e.clientX + 'px';
+        burst.style.top  = e.clientY + 'px';
+        document.body.appendChild(burst);
+        setTimeout(() => burst.remove(), 800);
+      });
+    }
 });

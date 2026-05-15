@@ -34,6 +34,14 @@
   padding: 0;
 }
 
+* {
+  cursor: url('/assets/heart-cursor.svg') 16 16, auto;
+}
+
+a, button {
+  cursor: url('/assets/heart-cursor.svg') 16 16, pointer;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -1274,4 +1282,36 @@ footer {
 @media (max-width: 500px) {
   .gallery-masonry { columns: 1; }
   .nav-links { gap: 1.2rem; }
+}
+
+/*=====================================
+  HEART CURSOR
+  ====================================*/
+
+.heart-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  font-size: 1.2rem;
+  color: var(--stone);
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+  user-select: none;
+}
+
+.click-heart {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  font-size: 1rem;
+  color: var(--bark);
+  transform: translate(-50%, -50%);
+  animation: heartPop 0.8s ease forwards;
+  user-select: none;
+}
+
+@keyframes heartPop {
+  0%   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  50%  { opacity: 1; transform: translate(-50%, -120%) scale(1.8); }
+  100% { opacity: 0; transform: translate(-50%, -200%) scale(0.5); }
 }
