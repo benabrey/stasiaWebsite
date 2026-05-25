@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -100,132 +99,135 @@
       </ul>
     </nav>
     <main>
+      <!-- HERO -->
+      <section class="contact-hero">
+        <div class="contact-hero-bg">
+          <img src="/assets/images/stasiaLandscape.webp" alt="Contact" />
+        </div>
+        <div class="contact-hero-content reveal">
+          <p class="section-label" style="color: var(--stone)">Get in Touch</p>
+          <h1 class="section-title" style="color: var(--warm-white)">
+            Let's create<br /><em>something beautiful</em>
+          </h1>
+        </div>
+      </section>
 
-    <!-- HERO -->
-    <section class="contact-hero">
-      <div class="contact-hero-bg">
-        <img src="/assets/images/stasiaLandscape.webp" alt="Contact" />
-      </div>
-      <div class="contact-hero-content reveal">
-        <p class="section-label" style="color: var(--stone)">Get in Touch</p>
-        <h1 class="section-title" style="color: var(--warm-white)">
-          Let's create<br /><em>something beautiful</em>
-        </h1>
-      </div>
-    </section>
-
-    <!-- CONTACT BODY -->
-    <div class="contact-section">
-      <p class="contact-intro reveal">
-        I'd love to hear about your vision. Fill out the form below and I'll be
-        in touch within 48 hours.
-      </p>
-
-      <!-- Contact info strip -->
-      <div
-        class="stagger"
-        style="
-          margin-bottom: 3rem;
-          display: flex;
-          flex-direction: column;
-          gap: 0.6rem;
-        "
-      >
-        <p
-          style="font-size: 0.8rem; letter-spacing: 0.15em; color: var(--taupe)"
-        >
-          <span
-            style="
-              color: var(--stone);
-              text-transform: uppercase;
-              font-size: 0.65rem;
-              letter-spacing: 0.3em;
-            "
-            >Location&nbsp;&nbsp;</span
-          >
-          Kelowna, BC
+      <!-- CONTACT BODY -->
+      <div class="contact-section">
+        <p class="contact-intro reveal">
+          I'd love to hear about your vision. Fill out the form below and I'll
+          be in touch within 48 hours.
         </p>
-      </div>
 
-      <!-- Form -->
-      <form
-        class="contact-form reveal"
-        id="contactForm"
-        action="https://api.web3forms.com/submit"
-        method="POST"
-      >
-        <input
-          type="hidden"
-          name="access_key"
-          value="5dded76d-5cb1-4756-94e9-018b346de9b7"
-        />
-        <input
-          type="hidden"
-          name="subject"
-          value="New Booking Inquiry - Aesthetics By Stasia"
-        />
+        <!-- Contact info strip -->
+        <div
+          class="stagger"
+          style="
+            margin-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+          "
+        >
+          <p
+            style="
+              font-size: 0.8rem;
+              letter-spacing: 0.15em;
+              color: var(--taupe);
+            "
+          >
+            <span
+              style="
+                color: var(--stone);
+                text-transform: uppercase;
+                font-size: 0.65rem;
+                letter-spacing: 0.3em;
+              "
+              >Location&nbsp;&nbsp;</span
+            >
+            Kelowna, BC
+          </p>
+        </div>
 
-        <div class="form-row">
+        <!-- Form -->
+        <form
+          class="contact-form reveal"
+          id="contactForm"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="5dded76d-5cb1-4756-94e9-018b346de9b7"
+          />
+          <input
+            type="hidden"
+            name="subject"
+            value="New Booking Inquiry - Aesthetics By Stasia"
+          />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="name">Your Name</label>
+              <input
+                class="form-input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Jane Smith"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input
+                class="form-input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="jane@email.com"
+                required
+              />
+            </div>
+          </div>
           <div class="form-group">
-            <label class="form-label" for="name">Your Name</label>
+            <label class="form-label" for="service">Type of Session</label>
+            <select class="form-select" id="service" name="service">
+              <option value="">Select one</option>
+              <option value="wedding">Wedding</option>
+              <option value="elopement">Elopement</option>
+              <option value="couples">Couples</option>
+              <option value="portraits">Portraits</option>
+              <option value="event">Event</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="subject">Subject</label>
             <input
               class="form-input"
               type="text"
-              id="name"
-              name="name"
-              placeholder="Jane Smith"
+              id="subject"
+              name="subject"
+              placeholder="Booking inquiry, question, etc."
               required
             />
           </div>
           <div class="form-group">
-            <label class="form-label" for="email">Email</label>
-            <input
-              class="form-input"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="jane@email.com"
-              required
-            />
+            <label class="form-label" for="message">Tell me about you</label>
+            <textarea
+              class="form-textarea"
+              id="message"
+              name="message"
+              placeholder="Your story, date, vision..."
+            ></textarea>
           </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="service">Type of Session</label>
-          <select class="form-select" id="service" name="service">
-            <option value="">Select one</option>
-            <option value="wedding">Wedding</option>
-            <option value="elopement">Elopement</option>
-            <option value="couples">Couples</option>
-            <option value="portraits">Portraits</option>
-            <option value="event">Event</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="subject">Subject</label>
-          <input
-            class="form-input"
-            type="text"
-            id="subject"
-            name="subject"
-            placeholder="Booking inquiry, question, etc."
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="message">Tell me about you</label>
-          <textarea
-            class="form-textarea"
-            id="message"
-            name="message"
-            placeholder="Your story, date, vision..."
-          ></textarea>
-        </div>
-        <button type="submit" class="submit-btn">
-          <span>Send Message</span>
-        </button>
-        <input type="hidden" name="to" value="aestheticsbystasia@gmail.com" />
-      </form>
-    </div>
+          <button type="submit" class="submit-btn">
+            <span>Send Message</span>
+          </button>
+          <input type="hidden" name="to" value="aestheticsbystasia@gmail.com" />
+        </form>
+      </div>
     </main>
     <!-- FOOTER -->
     <footer>
@@ -241,9 +243,13 @@
           >Instagram</a
         >
       </div>
+      <div class="footer-legal">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms &amp; Conditions</a>
+      </div>
       <div class="footer-credit">
         Site by
-        <a href="https://linkedin.com/in/ben-abrey-39bb7025a/">Ben Abrey</a>
+        <a href="https://linkedin.com/in/benabrey/">Ben Abrey</a>
       </div>
     </footer>
 

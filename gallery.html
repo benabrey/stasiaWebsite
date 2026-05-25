@@ -89,188 +89,187 @@
         <span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/index" >Home</a></li>
+        <li><a href="/index">Home</a></li>
         <li><a href="/gallery" class="active">Gallery</a></li>
         <li><a href="/contact">Contact</a></li>
         <li><a href="/pricing">Pricing</a></li>
       </ul>
     </nav>
     <main>
+      <!-- HERO -->
+      <section class="gallery-page-hero">
+        <div class="hero-bg">
+          <img src="/assets/images/stasiaLandscape.webp" alt="Gallery" />
+        </div>
+        <div class="hero-content reveal-left">
+          <p class="section-label" style="color: var(--stone)">Portfolio</p>
+          <h2 class="section-title" style="color: var(--warm-white)">
+            Explore My<br /><em>Latest Work</em>
+          </h2>
+        </div>
+      </section>
 
-    <!-- HERO -->
-    <section class="gallery-page-hero">
-      <div class="hero-bg">
-        <img src="/assets/images/stasiaLandscape.webp" alt="Gallery" />
+      <!-- FILTER BUTTONS -->
+      <div class="gallery-filter stagger">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="portrait">Portraits</button>
+        <button class="filter-btn" data-filter="weddings">Weddings</button>
+        <button class="filter-btn" data-filter="couple">Couples</button>
       </div>
-      <div class="hero-content reveal-left">
-        <p class="section-label" style="color: var(--stone)">Portfolio</p>
-        <h2 class="section-title" style="color: var(--warm-white)">
-          Explore My<br /><em>Latest Work</em>
-        </h2>
-      </div>
-    </section>
 
-    <!-- FILTER BUTTONS -->
-    <div class="gallery-filter stagger">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="portrait">Portraits</button>
-      <button class="filter-btn" data-filter="weddings">Weddings</button>
-      <button class="filter-btn" data-filter="couple">Couples</button>
-    </div>
+      <!-- MASONRY GRID -->
+      <div class="gallery-masonry">
+        <div class="masonry-item" data-category="couple">
+          <img
+            src="/assets/images/b2b.webp"
+            loading="lazy"
+            alt="Couple sitting back to back - Kelowna"
+          />
+        </div>
+        <div class="masonry-item" data-category="couple">
+          <img
+            src="/assets/images/running-field.webp"
+            loading="lazy"
+            alt="Couple running in field - Kelowna"
+          />
+        </div>
+        <div class="masonry-item" data-category="couple">
+          <img
+            src="/assets/images/lookUp.webp"
+            loading="lazy"
+            alt="Someone looking up at another person - Kelowna"
+          />
+        </div>
+        <div class="masonry-item" data-category="portrait">
+          <img
+            src="/assets/images/friends-stack.webp"
+            loading="lazy"
+            alt="Friends getting photographed - Kelowna"
+          />
+        </div>
+        <div class="masonry-item" data-category="portrait">
+          <img
+            src="/assets/images/BNStand.webp"
+            loading="lazy"
+            alt="Couple - Kelowna "
+          />
+        </div>
+        <div class="masonry-item" data-category="couple">
+          <img
+            src="/assets/images/spinning.webp"
+            loading="lazy"
+            alt="Couple spinning for photo - Kelowna"
+          />
+        </div>
+        <div class="masonry-item" data-category="couple">
+          <img
+            src="/assets/images/hillSit.webp"
+            loading="lazy"
+            alt="two people sitting on a hill  - Kelowna"
+          />
+        </div>
+        <div class="masonry-item" data-category="couple">
+          <img
+            src="/assets/images/leading.webp"
+            loading="lazy"
+            alt="Couple walking - Kelowna"
+          />
+        </div>
+        <div class="masonry-item" data-category="portrait">
+          <img
+            src="/assets/images/2FSpin.webp"
+            loading="lazy"
+            alt="Two friends having fun - Kelowna"
+          />
+        </div>
+        <div class="masonry-item" data-category="couple">
+          <img
+            src="/assets/images/lowerdance.webp"
+            loading="lazy"
+            alt="People dancing - Kelowna"
+          />
+        </div>
+        <div class="masonry-item" data-category="couple">
+          <img
+            src="/assets/images/hairtuck.webp"
+            loading="lazy"
+            alt="Couples photoshoot - Kelowna"
+          />
+        </div>
+        <div class="masonry-item" data-category="couple">
+          <img
+            src="/assets/images/b2bstand.webp"
+            loading="lazy"
+            alt="People standing back to back - Kelowna"
+          />
+        </div>
+        <div class="masonry-item" data-category="couple">
+          <img
+            src="/assets/images/Lift.webp"
+            loading="lazy"
+            alt="Couple doing lift - Kelowna"
+          />
+        </div>
+        <div class="masonry-item" data-category="portrait">
+          <img
+            src="/assets/images/AbiHarlie.webp"
+            loading="lazy"
+            alt="Holding hands walking - Kelowna"
+          />
+        </div>
+        <div class="masonry-item" data-category="portrait">
+          <img
+            src="/assets/images/BNLaugh.webp"
+            loading="lazy"
+            alt="Couple - Kelowna "
+          />
+        </div>
+        <div class="masonry-item" data-category="portrait">
+          <img
+            src="/assets/images/two-white.webp"
+            loading="lazy"
+            alt="Friends - Kelowna "
+          />
+        </div>
+        <div class="masonry-item" data-category="couple">
+          <img
+            src="/assets/images/BNClose.webp"
+            loading="lazy"
+            alt="Couple - Kelowna "
+          />
+        </div>
+      </div>
 
-    <!-- MASONRY GRID -->
-    <div class="gallery-masonry">
-      <div class="masonry-item" data-category="couple">
-        <img
-          src="/assets/images/b2b.webp"
-          loading="lazy"
-          alt="Couple sitting back to back - Kelowna"
-        />
+      <!-- LIGHTBOX -->
+      <div class="lightbox">
+        <img class="lightbox-img" src="" alt="Full size" />
+        <button class="lightbox-close">Close ×</button>
       </div>
-      <div class="masonry-item" data-category="couple">
-        <img
-          src="/assets/images/running-field.webp"
-          loading="lazy"
-          alt="Couple running in field - Kelowna"
-        />
-      </div>
-      <div class="masonry-item" data-category="couple">
-        <img
-          src="/assets/images/lookUp.webp"
-          loading="lazy"
-          alt="Someone looking up at another person - Kelowna"
-        />
-      </div>
-      <div class="masonry-item" data-category="portrait">
-        <img
-          src="/assets/images/friends-stack.webp"
-          loading="lazy"
-          alt="Friends getting photographed - Kelowna"
-        />
-      </div>
-      <div class="masonry-item" data-category="portrait">
-        <img
-          src="/assets/images/BNStand.webp"
-          loading="lazy"
-          alt="Couple - Kelowna "
-        />
-      </div>
-      <div class="masonry-item" data-category="couple">
-        <img
-          src="/assets/images/spinning.webp"
-          loading="lazy"
-          alt="Couple spinning for photo - Kelowna"
-        />
-      </div>
-      <div class="masonry-item" data-category="couple">
-        <img
-          src="/assets/images/hillSit.webp"
-          loading="lazy"
-          alt="two people sitting on a hill  - Kelowna"
-        />
-      </div>
-      <div class="masonry-item" data-category="couple">
-        <img
-          src="/assets/images/leading.webp"
-          loading="lazy"
-          alt="Couple walking - Kelowna"
-        />
-      </div>
-      <div class="masonry-item" data-category="portrait">
-        <img
-          src="/assets/images/2FSpin.webp"
-          loading="lazy"
-          alt="Two friends having fun - Kelowna"
-        />
-      </div>
-      <div class="masonry-item" data-category="couple">
-        <img
-          src="/assets/images/lowerdance.webp"
-          loading="lazy"
-          alt="People dancing - Kelowna"
-        />
-      </div>
-      <div class="masonry-item" data-category="couple">
-        <img
-          src="/assets/images/hairtuck.webp"
-          loading="lazy"
-          alt="Couples photoshoot - Kelowna"
-        />
-      </div>
-      <div class="masonry-item" data-category="couple">
-        <img
-          src="/assets/images/b2bstand.webp"
-          loading="lazy"
-          alt="People standing back to back - Kelowna"
-        />
-      </div>
-      <div class="masonry-item" data-category="couple">
-        <img
-          src="/assets/images/Lift.webp"
-          loading="lazy"
-          alt="Couple doing lift - Kelowna"
-        />
-      </div>
-      <div class="masonry-item" data-category="portrait">
-        <img
-          src="/assets/images/AbiHarlie.webp"
-          loading="lazy"
-          alt="Holding hands walking - Kelowna"
-        />
-      </div>
-      <div class="masonry-item" data-category="portrait">
-        <img
-          src="/assets/images/BNLaugh.webp"
-          loading="lazy"
-          alt="Couple - Kelowna "
-        />
-      </div>
-      <div class="masonry-item" data-category="portrait">
-        <img
-          src="/assets/images/two-white.webp"
-          loading="lazy"
-          alt="Friends - Kelowna "
-        />
-      </div>
-      <div class="masonry-item" data-category="couple">
-        <img
-          src="/assets/images/BNClose.webp"
-          loading="lazy"
-          alt="Couple - Kelowna "
-        />
-      </div>
-    </div>
 
-    <!-- LIGHTBOX -->
-    <div class="lightbox">
-      <img class="lightbox-img" src="" alt="Full size" />
-      <button class="lightbox-close">Close ×</button>
-    </div>
-
-    <div style="text-align: center; padding: 2rem 0 4rem">
-      <p
-        style="
-          color: var(--taupe);
-          margin-bottom: 1rem;
-          font-family: var(--font-display);
-          font-size: 1.2rem;
-        "
-      >
-        Ready to book?
-      </p>
-      <a
-        href="/contact"
-        class="hero-cta"
-        style="
-          opacity: 1;
-          transform: none;
-          animation: none;
-          color: var(--bark);
-          border-color: var(--bark);
-        "
-        ><span>Get in Touch</span></a
-      >
-    </div>
+      <div style="text-align: center; padding: 2rem 0 4rem">
+        <p
+          style="
+            color: var(--taupe);
+            margin-bottom: 1rem;
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+          "
+        >
+          Ready to book?
+        </p>
+        <a
+          href="/contact"
+          class="hero-cta"
+          style="
+            opacity: 1;
+            transform: none;
+            animation: none;
+            color: var(--bark);
+            border-color: var(--bark);
+          "
+          ><span>Get in Touch</span></a
+        >
+      </div>
     </main>
 
     <!-- FOOTER -->
@@ -287,12 +286,16 @@
           >Instagram</a
         >
       </div>
+      <div class="footer-legal">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms &amp; Conditions</a>
+      </div>
       <div class="footer-credit">
         Site by
-        <a href="https://linkedin.com/in/ben-abrey-39bb7025a/">Ben Abrey</a>
+        <a href="https://linkedin.com/in/benabrey/">Ben Abrey</a>
       </div>
     </footer>
 
-    <script src="/assets/js/script.min.js" defer ></script>
+    <script src="/assets/js/script.min.js" defer></script>
   </body>
 </html>
