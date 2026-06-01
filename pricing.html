@@ -226,7 +226,8 @@
     <footer>
       <div class="footer-logo">Aesthetics By Stasia</div>
       <div class="footer-copy">
-        &copy; 2025 Aesthetics By Stasia. All rights reserved.
+        &copy; <span id="current-year"></span> Aesthetics By Stasia. All rights
+        reserved.
       </div>
       <div class="footer-social">
         <a href="/gallery">Gallery</a>
@@ -236,16 +237,20 @@
           >Instagram</a
         >
       </div>
-        <div class="footer-legal">
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms &amp; Conditions</a>
-        </div>
+      <div class="footer-legal">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms &amp; Conditions</a>
+      </div>
       <div class="footer-credit">
         Site by
         <a href="https://linkedin.com/in/benabrey/">Ben Abrey</a>
       </div>
     </footer>
 
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
     <script src="/assets/js/script.min.js" defer></script>
   </body>
 </html>
