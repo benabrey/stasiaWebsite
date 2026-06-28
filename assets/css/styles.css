@@ -8,19 +8,19 @@
    VARIABLES
    ============================================================ */
 :root {
-  --cream:      #f3ebd9;
+  --cream: #f3ebd9;
   --warm-white: #f3ebd9;
-  --stone:      #a8b8a8;
-  --taupe:      #7a9478;
-  --bark:       #223721;
-  --charcoal:   #2c3a2c;
-  --ink:        #1a2419;
+  --stone: #a8b8a8;
+  --taupe: #7a9478;
+  --bark: #223721;
+  --charcoal: #2c3a2c;
+  --ink: #1a2419;
 
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body:    'DM Sans', sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "DM Sans", sans-serif;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out:   cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
 
   --nav-height: 72px;
 }
@@ -28,18 +28,25 @@
 /* ============================================================
    RESET
    ============================================================ */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 * {
-  cursor: url('/assets/heart-cursor.svg') 16 16, auto;
+  cursor:
+    url("/assets/heart-cursor.svg") 16 16,
+    auto;
 }
 
-a, button {
-  cursor: url('/assets/heart-cursor.svg') 16 16, pointer;
+a,
+button {
+  cursor:
+    url("/assets/heart-cursor.svg") 16 16,
+    pointer;
 }
 
 html {
@@ -79,7 +86,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.8s var(--ease-out-expo), visibility 0.8s;
+  transition:
+    opacity 0.8s var(--ease-out-expo),
+    visibility 0.8s;
 }
 
 .loader.hidden {
@@ -98,8 +107,13 @@ a {
 }
 
 @keyframes loaderPulse {
-  0%, 100% { opacity: 0.4; }
-  50%       { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 /* ============================================================
@@ -115,15 +129,21 @@ a {
   pointer-events: none;
 }
 
-.page-transition.entering { transform: translateY(0); }
-.page-transition.exiting  { transform: translateY(-100%); }
+.page-transition.entering {
+  transform: translateY(0);
+}
+.page-transition.exiting {
+  transform: translateY(-100%);
+}
 
 /* ============================================================
    NAV
    ============================================================ */
 nav {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: var(--nav-height);
   z-index: 100;
   display: flex;
@@ -134,7 +154,9 @@ nav {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 rgba(74, 110, 72, 0.1);
-  transition: background 0.5s ease, box-shadow 0.5s ease;
+  transition:
+    background 0.5s ease,
+    box-shadow 0.5s ease;
 }
 
 nav.scrolled,
@@ -171,10 +193,12 @@ nav.always-visible {
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: -3px; left: 0;
-  width: 0; height: 1px;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
   background: var(--taupe);
   transition: width 0.4s var(--ease-out-expo);
 }
@@ -199,12 +223,20 @@ nav.always-visible {
   width: 24px;
   height: 1.5px;
   background: var(--bark);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
-.nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-.nav-toggle.open span:nth-child(2) { opacity: 0; }
-.nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
 
 /* ============================================================
    HERO — SPLIT LAYOUT
@@ -233,7 +265,7 @@ nav.always-visible {
 }
 
 .hero-left::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
@@ -258,7 +290,7 @@ nav.always-visible {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.0rem, 4.5vw, 5rem);
+  font-size: clamp(2rem, 4.5vw, 5rem);
   font-weight: 300;
   line-height: 1.05;
   color: var(--warm-white);
@@ -360,9 +392,20 @@ section.hero {
 }
 
 @keyframes scrollPulse {
-  0%   { transform: scaleY(0); opacity: 0; transform-origin: top; }
-  50%  { transform: scaleY(1); opacity: 1; }
-  100% { transform: scaleY(0); opacity: 0; transform-origin: bottom; }
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: bottom;
+  }
 }
 
 /* ============================================================
@@ -396,7 +439,7 @@ section.hero {
 }
 
 .hero-cta::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: var(--stone);
@@ -404,9 +447,16 @@ section.hero {
   transition: transform 0.5s var(--ease-out-expo);
 }
 
-.hero-cta:hover::before { transform: translateX(0); }
-.hero-cta:hover         { color: var(--ink); }
-.hero-cta span          { position: relative; z-index: 1; }
+.hero-cta:hover::before {
+  transform: translateX(0);
+}
+.hero-cta:hover {
+  color: var(--ink);
+}
+.hero-cta span {
+  position: relative;
+  z-index: 1;
+}
 
 /* ============================================================
    SECTION SHARED
@@ -443,7 +493,9 @@ section {
 .reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+  transition:
+    opacity 0.9s var(--ease-out-expo),
+    transform 0.9s var(--ease-out-expo);
 }
 
 .reveal.visible {
@@ -454,7 +506,9 @@ section {
 .reveal-left {
   opacity: 0;
   transform: translateX(-40px);
-  transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+  transition:
+    opacity 0.9s var(--ease-out-expo),
+    transform 0.9s var(--ease-out-expo);
 }
 
 .reveal-left.visible {
@@ -465,7 +519,9 @@ section {
 .reveal-right {
   opacity: 0;
   transform: translateX(40px);
-  transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+  transition:
+    opacity 0.9s var(--ease-out-expo),
+    transform 0.9s var(--ease-out-expo);
 }
 
 .reveal-right.visible {
@@ -476,15 +532,41 @@ section {
 .stagger > * {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+  transition:
+    opacity 0.8s var(--ease-out-expo),
+    transform 0.8s var(--ease-out-expo);
 }
 
-.stagger.visible > *:nth-child(1) { opacity:1; transform:none; transition-delay: 0s; }
-.stagger.visible > *:nth-child(2) { opacity:1; transform:none; transition-delay: 0.12s; }
-.stagger.visible > *:nth-child(3) { opacity:1; transform:none; transition-delay: 0.24s; }
-.stagger.visible > *:nth-child(4) { opacity:1; transform:none; transition-delay: 0.36s; }
-.stagger.visible > *:nth-child(5) { opacity:1; transform:none; transition-delay: 0.48s; }
-.stagger.visible > *:nth-child(6) { opacity:1; transform:none; transition-delay: 0.60s; }
+.stagger.visible > *:nth-child(1) {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0s;
+}
+.stagger.visible > *:nth-child(2) {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.12s;
+}
+.stagger.visible > *:nth-child(3) {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.24s;
+}
+.stagger.visible > *:nth-child(4) {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.36s;
+}
+.stagger.visible > *:nth-child(5) {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.48s;
+}
+.stagger.visible > *:nth-child(6) {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.6s;
+}
 
 /* ============================================================
    SERVICES — photo cards
@@ -551,7 +633,9 @@ section {
 
 .service-item-content {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 2rem 1.5rem;
   text-align: left;
 }
@@ -573,7 +657,9 @@ section {
   margin-bottom: 1rem;
   opacity: 0;
   transform: translateY(8px);
-  transition: opacity 0.4s var(--ease-out-expo), transform 0.4s var(--ease-out-expo);
+  transition:
+    opacity 0.4s var(--ease-out-expo),
+    transform 0.4s var(--ease-out-expo);
 }
 
 .service-item:hover .service-item-desc {
@@ -591,7 +677,9 @@ section {
   padding-bottom: 2px;
   opacity: 0;
   transform: translateY(8px);
-  transition: opacity 0.4s var(--ease-out-expo) 0.05s, transform 0.4s var(--ease-out-expo) 0.05s;
+  transition:
+    opacity 0.4s var(--ease-out-expo) 0.05s,
+    transform 0.4s var(--ease-out-expo) 0.05s;
 }
 
 .service-item:hover .service-item-arrow {
@@ -626,7 +714,7 @@ section {
 }
 
 .about-image-wrap::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 1rem;
   border: 1px solid var(--stone);
@@ -649,14 +737,14 @@ section {
 
 .about-section {
   position: relative;
-  background-image: url('/assets/images/stasiaLandscape.webp');
+  background-image: url("/assets/images/stasiaLandscape.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
 .about-section::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: rgba(232, 239, 232, 0.85);
@@ -680,7 +768,7 @@ section {
 }
 
 .quote-strip::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
@@ -758,7 +846,9 @@ section {
   cursor: pointer;
   padding-bottom: 4px;
   border-bottom: 1px solid transparent;
-  transition: color 0.3s ease, border-color 0.3s ease;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
   font-family: var(--font-body);
 }
 
@@ -788,7 +878,9 @@ section {
   display: block;
   width: 100%;
   height: auto;
-  transition: transform 0.7s var(--ease-in-out), filter 0.5s ease;
+  transition:
+    transform 0.7s var(--ease-in-out),
+    filter 0.5s ease;
 }
 
 .masonry-item:hover img {
@@ -820,7 +912,9 @@ section {
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s;
 }
 
 .lightbox.open {
@@ -844,7 +938,8 @@ section {
 
 .lightbox-close {
   position: absolute;
-  top: 1.5rem; right: 2rem;
+  top: 1.5rem;
+  right: 2rem;
   color: var(--stone);
   font-size: 0.7rem;
   letter-spacing: 0.3em;
@@ -856,7 +951,9 @@ section {
   transition: color 0.3s ease;
 }
 
-.lightbox-close:hover { color: var(--cream); }
+.lightbox-close:hover {
+  color: var(--cream);
+}
 
 /* ============================================================
    CONTACT PAGE
@@ -900,7 +997,9 @@ section {
   line-height: 1.7;
 }
 
-.form-group { margin-bottom: 2rem; }
+.form-group {
+  margin-bottom: 2rem;
+}
 
 .form-label {
   display: block;
@@ -928,11 +1027,16 @@ section {
 }
 
 .form-input::placeholder,
-.form-textarea::placeholder { color: var(--stone); opacity: 0.6; }
+.form-textarea::placeholder {
+  color: var(--stone);
+  opacity: 0.6;
+}
 
 .form-input:focus,
 .form-textarea:focus,
-.form-select:focus { border-bottom-color: var(--bark); }
+.form-select:focus {
+  border-bottom-color: var(--bark);
+}
 
 .form-textarea {
   resize: none;
@@ -971,7 +1075,7 @@ section {
 }
 
 .submit-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: var(--charcoal);
@@ -979,8 +1083,13 @@ section {
   transition: transform 0.5s var(--ease-out-expo);
 }
 
-.submit-btn:hover::before { transform: translateY(0); }
-.submit-btn span { position: relative; z-index: 1; }
+.submit-btn:hover::before {
+  transform: translateY(0);
+}
+.submit-btn span {
+  position: relative;
+  z-index: 1;
+}
 
 /* ============================================================
    PRICING PAGE
@@ -1036,13 +1145,15 @@ section {
 }
 
 .pricing-features li::before {
-  content: '—';
+  content: "—";
   position: absolute;
   left: 0;
   color: var(--stone);
 }
 
-.pricing-cta-wrap { flex-shrink: 0; }
+.pricing-cta-wrap {
+  flex-shrink: 0;
+}
 
 /* ============================================================
    LEGAL PAGES (privacy / terms)
@@ -1050,7 +1161,8 @@ section {
 .legal-page {
   max-width: 760px;
   margin: 0 auto;
-  padding: calc(var(--nav-height) + 5rem) clamp(1.5rem, 5vw, 4rem) clamp(5rem, 8vw, 7rem);
+  padding: calc(var(--nav-height) + 5rem) clamp(1.5rem, 5vw, 4rem)
+    clamp(5rem, 8vw, 7rem);
 }
 
 .legal-page .section-label {
@@ -1132,7 +1244,9 @@ section {
   color: var(--bark);
   border-bottom: 1px solid var(--stone);
   padding-bottom: 1px;
-  transition: border-color 0.3s ease, opacity 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .legal-section a:hover {
@@ -1233,7 +1347,9 @@ footer {
   text-transform: uppercase;
   color: var(--stone);
   opacity: 0.7;
-  transition: opacity 0.3s ease, color 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    color 0.3s ease;
 }
 
 .footer-legal a:hover {
@@ -1265,11 +1381,16 @@ footer {
    KEYFRAMES
    ============================================================ */
 @keyframes fadeUp {
-  to { opacity: 1; transform: translateY(0); }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 /* ============================================================
@@ -1284,27 +1405,25 @@ footer {
     display: none;
     position: absolute;
     top: var(--nav-height);
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
     background: #f3ebd9;
     flex-direction: column;
     padding: 1.5rem 2rem;
     gap: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
 
   .nav-links.open {
     display: flex;
   }
 
-  section.hero {
-    height: 110vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 63% 37%;
-  }
-
+  section.hero,
   .hero {
+    height: auto;
+    min-height: calc(100vh - var(--nav-height));
     grid-template-columns: 1fr;
-    grid-template-rows: 55% 45%;
+    grid-template-rows: minmax(50vh, 60vh) auto;
   }
 
   .hero-right {
@@ -1313,22 +1432,26 @@ footer {
 
   .hero-left {
     justify-content: flex-end;
-    padding: 0 1.5rem 1.5rem;
+    padding: 2rem 1.75rem 2.5rem;
   }
 
+  .hero-brand {
+    display: none;
+  }
   .hero-title {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
   }
 
   .hero-eyebrow {
-    font-size: 0.6rem;
-    margin-bottom: 0.2rem;
+    font-size: 0.65rem;
+    margin-bottom: 1.2rem;
   }
 
   .hero-sub {
-    font-size: 0.75rem;
-    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
   }
 
   .hero-cta {
@@ -1402,8 +1525,12 @@ footer {
 }
 
 @media (max-width: 500px) {
-  .gallery-masonry { columns: 1; }
-  .nav-links { gap: 1.2rem; }
+  .gallery-masonry {
+    columns: 1;
+  }
+  .nav-links {
+    gap: 1.2rem;
+  }
 }
 
 /* ============================================================
@@ -1432,7 +1559,16 @@ footer {
 }
 
 @keyframes heartPop {
-  0%   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-  50%  { opacity: 1; transform: translate(-50%, -120%) scale(1.8); }
-  100% { opacity: 0; transform: translate(-50%, -200%) scale(0.5); }
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -120%) scale(1.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -200%) scale(0.5);
+  }
 }
