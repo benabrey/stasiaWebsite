@@ -205,16 +205,56 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const data = new FormData(form);
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: data,
-      });
-      if (res.ok) {
-        form.innerHTML =
-          '<p style="font-family:var(--font-display);font-size:1.5rem;font-style:italic;color:var(--taupe);text-align:center;padding:3rem 0;">Thank you! I\'ll be in touch within 48 hours.</p>';
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn ? btn.textContent : "";
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = "Sending...";
+      }
+      try {
+        const data = new FormData(form);
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: data,
+        });
+        if (res.ok) {
+          form.innerHTML =
+            '<p style="font-family:var(--font-display);font-size:1.5rem;font-style:italic;color:var(--taupe);text-align:center;padding:3rem 0;">Thank you! I\'ll be in touch within 48 hours.</p>';
+        } else if (res.status === 429) {
+          showFormError(
+            form,
+            "Too many requests — please wait a minute and try again.",
+          );
+        } else {
+          showFormError(
+            form,
+            "Something went wrong. Please try again or email directly.",
+          );
+        }
+      } catch {
+        showFormError(
+          form,
+          "Network error — please check your connection and try again.",
+        );
+      } finally {
+        if (btn && form.contains(btn)) {
+          btn.disabled = false;
+          btn.textContent = originalText;
+        }
       }
     });
+  }
+
+  function showFormError(formEl, message) {
+    let errEl = formEl.querySelector(".form-error");
+    if (!errEl) {
+      errEl = document.createElement("p");
+      errEl.className = "form-error";
+      errEl.style.cssText =
+        "color:#c0392b;font-family:var(--font-body);text-align:center;margin-top:1rem;";
+      formEl.appendChild(errEl);
+    }
+    errEl.textContent = message;
   }
 
   // ===========================================================
