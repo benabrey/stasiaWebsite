@@ -1006,7 +1006,7 @@ section {
   font-size: 0.68rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--stone);
+  color: var(--taupe);
   margin-bottom: 0.6rem;
 }
 
@@ -1016,8 +1016,8 @@ section {
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 1px solid var(--stone);
-  color: var(--charcoal);
+  border-bottom: 1px solid var(--taupe);
+  color: var(--taupe);
   font-family: var(--font-body);
   font-size: 0.95rem;
   padding: 0.6rem 0;
@@ -1097,7 +1097,7 @@ section {
 .pricing-list {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 1.5rem 2rem 4rem;
   display: flex;
   flex-direction: column;
 }

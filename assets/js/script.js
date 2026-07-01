@@ -1,211 +1,232 @@
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener("DOMContentLoaded", () => {
   // ============================================================
   // 1. PAGE LOADER
   // ============================================================
-  const loader = document.querySelector('.loader');
+  const loader = document.querySelector(".loader");
   if (loader) {
-    window.addEventListener('load', () => {
-      setTimeout(() => loader.classList.add('hidden'), 600);
-      
+    window.addEventListener("load", () => {
+      setTimeout(() => loader.classList.add("hidden"), 600);
     });
   }
 
   // ============================================================
   // 2. NAV SCROLL STATE
   // ============================================================
-  const nav = document.querySelector('nav');
+  const nav = document.querySelector("nav");
 
   const updateNav = () => {
     if (window.scrollY > 60) {
-      nav?.classList.add('scrolled');
+      nav?.classList.add("scrolled");
     } else {
-      nav?.classList.remove('scrolled');
+      nav?.classList.remove("scrolled");
     }
   };
 
-  window.addEventListener('scroll', updateNav, { passive: true });
+  window.addEventListener("scroll", updateNav, { passive: true });
   updateNav();
 
   // mark active link
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    const href = link.getAttribute('href').split('/').pop();
-    if (href === currentPage) link.classList.add('active');
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    const href = link.getAttribute("href").split("/").pop();
+    if (href === currentPage) link.classList.add("active");
   });
 
   // HAMBURGER MENU
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
 
-  navToggle?.addEventListener('click', () => {
-    navToggle.classList.toggle('open');
-    navLinks.classList.toggle('open');
-});
+  navToggle?.addEventListener("click", () => {
+    navToggle.classList.toggle("open");
+    navLinks.classList.toggle("open");
+  });
   // ============================================================
   // 3. SCROLL REVEAL
   // ============================================================
-  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .stagger');
+  const revealEls = document.querySelectorAll(
+    ".reveal, .reveal-left, .reveal-right, .stagger",
+  );
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -60px 0px" },
+  );
 
-  revealEls.forEach(el => observer.observe(el));
+  revealEls.forEach((el) => observer.observe(el));
 
   // ============================================================
   // 4. HERO SLIDESHOW
   // ============================================================
-  const slides = document.querySelectorAll('.hero-slide');
+  const slides = document.querySelectorAll(".hero-slide");
 
   if (slides.length > 1) {
     // shuffle slides
     const slideArray = [...slides];
     const parent = slideArray[0].parentNode;
     slideArray.sort(() => Math.random() - 0.5);
-    slideArray.forEach(slide => parent.appendChild(slide));
+    slideArray.forEach((slide) => parent.appendChild(slide));
 
     // make first one active
-    document.querySelectorAll('.hero-slide').forEach(s => s.classList.remove('active'));
-    document.querySelector('.hero-slide').classList.add('active');
+    document
+      .querySelectorAll(".hero-slide")
+      .forEach((s) => s.classList.remove("active"));
+    document.querySelector(".hero-slide").classList.add("active");
 
     let current = 0;
-    const shuffled = document.querySelectorAll('.hero-slide');
+    const shuffled = document.querySelectorAll(".hero-slide");
     setInterval(() => {
-      shuffled[current].classList.remove('active');
+      shuffled[current].classList.remove("active");
       current = (current + 1) % shuffled.length;
-      shuffled[current].classList.add('active');
+      shuffled[current].classList.add("active");
     }, 3000);
   }
 
-// ============================================================
-// 5. GALLERY FILTER
-// ============================================================
-const filterBtns = document.querySelectorAll('.filter-btn');
-const masonryItems = document.querySelectorAll('.masonry-item');
+  // ============================================================
+  // 5. GALLERY FILTER
+  // ============================================================
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const masonryItems = document.querySelectorAll(".masonry-item");
 
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
 
-    const filter = btn.dataset.filter;
+      const filter = btn.dataset.filter;
 
-    document.querySelector('.gallery-empty')?.remove();
+      document.querySelector(".gallery-empty")?.remove();
 
-    masonryItems.forEach(item => {
-      const show = filter === 'all' || item.dataset.category === filter;
-      item.style.display = show ? 'block' : 'none';
-    });
+      masonryItems.forEach((item) => {
+        const show = filter === "all" || item.dataset.category === filter;
+        item.style.display = show ? "block" : "none";
+      });
 
-    if (filter !== 'all') {
-      const anyVisible = [...masonryItems].some(item => item.dataset.category === filter);
-      if (!anyVisible) {
-        const msg = document.createElement('p');
-        msg.className = 'gallery-empty';
-        msg.textContent = 'Nothing yet — be the first!';
-        document.querySelector('.gallery-masonry').appendChild(msg);
+      if (filter !== "all") {
+        const anyVisible = [...masonryItems].some(
+          (item) => item.dataset.category === filter,
+        );
+        if (!anyVisible) {
+          const msg = document.createElement("p");
+          msg.className = "gallery-empty";
+          msg.textContent = "Nothing yet — be the first!";
+          document.querySelector(".gallery-masonry").appendChild(msg);
+        }
       }
-    }
+    });
   });
-});
 
-// auto-filter from URL param
-const params = new URLSearchParams(window.location.search);
-const preFilter = params.get('filter');
-if (preFilter) {
-  const btn = document.querySelector(`.filter-btn[data-filter="${preFilter}"]`);
-  if (btn) btn.click();
-}
-
+  // auto-filter from URL param
+  const params = new URLSearchParams(window.location.search);
+  const preFilter = params.get("filter");
+  if (preFilter) {
+    const btn = document.querySelector(
+      `.filter-btn[data-filter="${preFilter}"]`,
+    );
+    if (btn) btn.click();
+  }
 
   // ============================================================
   // 6. LIGHTBOX
   // ============================================================
-  const lightbox    = document.querySelector('.lightbox');
-  const lightboxImg = document.querySelector('.lightbox-img');
-  const lightboxClose = document.querySelector('.lightbox-close');
+  const lightbox = document.querySelector(".lightbox");
+  const lightboxImg = document.querySelector(".lightbox-img");
+  const lightboxClose = document.querySelector(".lightbox-close");
 
   if (lightbox && lightboxImg) {
-    document.querySelectorAll('.masonry-item img').forEach(img => {
-      img.addEventListener('click', () => {
+    document.querySelectorAll(".masonry-item img").forEach((img) => {
+      img.addEventListener("click", () => {
         lightboxImg.src = img.src;
-        lightbox.classList.add('open');
-        document.body.style.overflow = 'hidden';
+        lightbox.classList.add("open");
+        document.body.style.overflow = "hidden";
       });
     });
 
     const closeLightbox = () => {
-      lightbox.classList.remove('open');
-      document.body.style.overflow = '';
+      lightbox.classList.remove("open");
+      document.body.style.overflow = "";
     };
 
-    lightboxClose?.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    lightboxClose?.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+    });
   }
 
   // ============================================================
-// 7. PAGE TRANSITIONS
-// ============================================================
-const overlay = document.querySelector('.page-transition');
+  // 7. PAGE TRANSITIONS
+  // ============================================================
+  const overlay = document.querySelector(".page-transition");
 
-if (overlay) {
-  overlay.classList.add('exiting');
-  setTimeout(() => overlay.classList.remove('exiting'), 700);
+  if (overlay) {
+    overlay.classList.add("exiting");
+    setTimeout(() => overlay.classList.remove("exiting"), 700);
 
-  window.addEventListener('pageshow', (e) => {
-    if (e.persisted) {
-      overlay.classList.remove('entering');
-      overlay.classList.remove('exiting');
-    }
-  });
+    window.addEventListener("pageshow", (e) => {
+      if (e.persisted) {
+        overlay.classList.remove("entering");
+        overlay.classList.remove("exiting");
+      }
+    });
 
-  document.querySelectorAll('a[href]').forEach(link => {
-    const href = link.getAttribute('href');
-    const isInternal = href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto');
+    document.querySelectorAll("a[href]").forEach((link) => {
+      const href = link.getAttribute("href");
+      const isInternal =
+        href &&
+        !href.startsWith("http") &&
+        !href.startsWith("#") &&
+        !href.startsWith("mailto");
 
-    if (isInternal) {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        overlay.classList.add('entering');
-        setTimeout(() => { window.location.href = href; }, 600);
-      });
-    }
-  });
-}
+      if (isInternal) {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          overlay.classList.add("entering");
+          setTimeout(() => {
+            window.location.href = href;
+          }, 600);
+        });
+      }
+    });
+  }
 
-// ============================================================
+  // ============================================================
   // 8. CONTACT FORM SUCCESS
   // ============================================================
-  const form = document.querySelector('.contact-form');
+  const form = document.querySelector(".contact-form");
   if (form) {
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const data = new FormData(form);
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: data
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data,
       });
       if (res.ok) {
-        form.innerHTML = '<p style="font-family:var(--font-display);font-size:1.5rem;font-style:italic;color:var(--taupe);text-align:center;padding:3rem 0;">Thank you! I\'ll be in touch within 48 hours.</p>';
+        form.innerHTML =
+          '<p style="font-family:var(--font-display);font-size:1.5rem;font-style:italic;color:var(--taupe);text-align:center;padding:3rem 0;">Thank you! I\'ll be in touch within 48 hours.</p>';
       }
     });
   }
 
   // ===========================================================
-    // 9. Optional fields for Weddings/Events    
-    // ===========================================================
-    const service = document.getElementById('service');
+  // 9. Optional fields for Weddings/Events
+  // ===========================================================
+  const service = document.getElementById("service");
 
-    if(service){
-      const serviceGroup = service.closest('.form-group');
-      serviceGroup.insertAdjacentHTML('afterend', `
+  if (service) {
+    const serviceGroup = service.closest(".form-group");
+    serviceGroup.insertAdjacentHTML(
+      "afterend",
+      `
         <div class="form-row" id="event-fields" style="display:none">
         <div class="form-group">
         <label class="form-label" for="event-date">Date</label>
@@ -216,35 +237,44 @@ if (overlay) {
         <input class="form-input" type="text" id="event-location" name="event_location" placeholder="Venue or city" />
         </div>
         </div>
-        `);
-        
-        service.addEventListener('change', () => {
-          const show = ['wedding', 'event'].includes(service.value);
-          document.getElementById('event-fields').style.display = show ? 'flex' : 'none';
-        });
-      }
+        `,
+    );
 
-    // ============================================================
-    // 10. HEART CURSOR
-    // ============================================================
-    const heartCursor = document.getElementById('heartCursor');
+    service.addEventListener("change", () => {
+      const show = ["wedding", "event"].includes(service.value);
+      document.getElementById("event-fields").style.display = show
+        ? "flex"
+        : "none";
+    });
+  }
 
-    if (heartCursor && window.innerWidth > 600) {
-      document.body.style.cursor = 'none';
+  // ============================================================
+  // 10. HEART CURSOR
+  // ============================================================
+  const heartCursor = document.getElementById("heartCursor");
 
-      document.addEventListener('mousemove', e => {
-        heartCursor.style.left = e.clientX + 'px';
-        heartCursor.style.top  = e.clientY + 'px';
-      });
+  if (heartCursor && window.innerWidth > 600) {
+    document.body.style.cursor = "none";
 
-      document.addEventListener('click', e => {
-        const burst = document.createElement('div');
-        burst.className = 'click-heart';
-        burst.textContent = '♥';
-        burst.style.left = e.clientX + 'px';
-        burst.style.top  = e.clientY + 'px';
-        document.body.appendChild(burst);
-        setTimeout(() => burst.remove(), 800);
-      });
-    }
+    document.addEventListener("mousemove", (e) => {
+      heartCursor.style.left = e.clientX + "px";
+      heartCursor.style.top = e.clientY + "px";
+    });
+
+    document.addEventListener("click", (e) => {
+      const burst = document.createElement("div");
+      burst.className = "click-heart";
+      burst.textContent = "♥";
+      burst.style.left = e.clientX + "px";
+      burst.style.top = e.clientY + "px";
+      document.body.appendChild(burst);
+      setTimeout(() => burst.remove(), 800);
+    });
+  }
+
+  const hiddenInput = document.getElementById("formKey");
+
+  if (typeof web3AccessKey !== "undefined" && hiddenInput) {
+    hiddenInput.value = web3AccessKey;
+  }
 });
