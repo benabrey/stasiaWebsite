@@ -271,10 +271,4 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => burst.remove(), 800);
     });
   }
-
-  const hiddenInput = document.getElementById("formKey");
-
-  if (typeof web3AccessKey !== "undefined" && hiddenInput) {
-    hiddenInput.value = web3AccessKey;
-  }
 });
