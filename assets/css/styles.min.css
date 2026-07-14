@@ -512,10 +512,6 @@ section {
   gap: 1.5rem;
   margin-top: 3.5rem;
 }
-.about,
-.form-row {
-  grid-template-columns: 1fr 1fr;
-}
 .service-item {
   aspect-ratio: 3/4;
   display: block;
@@ -588,14 +584,10 @@ section {
 }
 .about {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: clamp(3rem, 6vw, 7rem);
   max-width: 1200px;
   margin: 0 auto;
-}
-.gallery-page-hero,
-.lightbox {
-  align-items: center;
-  display: flex;
 }
 .about-image-wrap {
   position: relative;
@@ -691,6 +683,8 @@ footer {
   height: 60svh;
   min-height: 300px;
   background: var(--bark);
+  display: flex;
+  align-items: center;
   padding: 0 clamp(1.5rem, 5vw, 4rem);
   padding-top: var(--nav-height);
   position: relative;
@@ -730,15 +724,14 @@ footer {
   border-bottom-color: var(--stone);
 }
 .gallery-masonry {
-  columns: 3;
-  column-gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
   padding: 3rem clamp(1.5rem, 5vw, 4rem) clamp(5rem, 8vw, 7rem);
   max-width: 1400px;
   margin: 0 auto;
 }
 .masonry-item {
-  break-inside: avoid;
-  margin-bottom: 12px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
@@ -770,6 +763,8 @@ footer {
   inset: 0;
   background: rgba(16, 12, 10, 0.96);
   z-index: 1000;
+  display: flex;
+  align-items: center;
   justify-content: center;
   opacity: 0;
   visibility: hidden;
@@ -845,7 +840,7 @@ footer {
 .form-label {
   display: block;
   font-size: 0.68rem;
-  color: var(--stone);
+  color: var(--taupe);
   margin-bottom: 0.6rem;
 }
 .form-input,
@@ -854,8 +849,8 @@ footer {
   width: 100%;
   background: 0 0;
   border: none;
-  border-bottom: 1px solid var(--stone);
-  color: var(--charcoal);
+  border-bottom: 1px solid var(--taupe);
+  color: var(--taupe);
   font-family: var(--font-body);
   font-size: 0.95rem;
   padding: 0.6rem 0;
@@ -886,6 +881,7 @@ footer {
 }
 .form-row {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 .submit-btn {
@@ -918,7 +914,7 @@ footer {
 .pricing-list {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 1.5rem 2rem 4rem;
   display: flex;
   flex-direction: column;
 }
@@ -1152,15 +1148,17 @@ footer {
   .about,
   .form-row,
   .hero,
-  .pricing-row,
   .services-grid,
-  footer,
   section.hero {
     grid-template-columns: 1fr;
   }
   .footer-copy,
   footer {
     text-align: center;
+  }
+  .nav-links,
+  .pricing-row {
+    gap: 1.5rem;
   }
   .nav-links.open,
   .nav-toggle {
@@ -1178,7 +1176,6 @@ footer {
     background: #f3ebd9;
     flex-direction: column;
     padding: 1.5rem 2rem;
-    gap: 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
   .hero,
@@ -1226,10 +1223,11 @@ footer {
     background-attachment: scroll;
   }
   .gallery-masonry {
-    columns: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .pricing-row {
-    gap: 1.5rem;
+  .pricing-row,
+  footer {
+    grid-template-columns: 1fr;
   }
   footer {
     grid-template-areas: "logo" "social" "copy" "legal" "credit";
@@ -1253,7 +1251,7 @@ footer {
 }
 @media (max-width: 500px) {
   .gallery-masonry {
-    columns: 1;
+    grid-template-columns: 1fr;
   }
   .nav-links {
     gap: 1.2rem;

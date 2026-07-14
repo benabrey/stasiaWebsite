@@ -118,127 +118,7 @@
       </div>
 
       <!-- MASONRY GRID -->
-      <div class="gallery-masonry">
-        <div class="masonry-item" data-category="couple">
-          <img
-            src="/assets/images/b2b.webp"
-            loading="lazy"
-            alt="Couple sitting back to back - Kelowna"
-          />
-        </div>
-        <div class="masonry-item" data-category="couple">
-          <img
-            src="/assets/images/running-field.webp"
-            loading="lazy"
-            alt="Couple running in field - Kelowna"
-          />
-        </div>
-        <div class="masonry-item" data-category="couple">
-          <img
-            src="/assets/images/lookUp.webp"
-            loading="lazy"
-            alt="Someone looking up at another person - Kelowna"
-          />
-        </div>
-        <div class="masonry-item" data-category="portrait">
-          <img
-            src="/assets/images/friends-stack.webp"
-            loading="lazy"
-            alt="Friends getting photographed - Kelowna"
-          />
-        </div>
-        <div class="masonry-item" data-category="portrait">
-          <img
-            src="/assets/images/BNStand.webp"
-            loading="lazy"
-            alt="Couple - Kelowna "
-          />
-        </div>
-        <div class="masonry-item" data-category="couple">
-          <img
-            src="/assets/images/spinning.webp"
-            loading="lazy"
-            alt="Couple spinning for photo - Kelowna"
-          />
-        </div>
-        <div class="masonry-item" data-category="couple">
-          <img
-            src="/assets/images/hillSit.webp"
-            loading="lazy"
-            alt="two people sitting on a hill  - Kelowna"
-          />
-        </div>
-        <div class="masonry-item" data-category="couple">
-          <img
-            src="/assets/images/leading.webp"
-            loading="lazy"
-            alt="Couple walking - Kelowna"
-          />
-        </div>
-        <div class="masonry-item" data-category="portrait">
-          <img
-            src="/assets/images/2FSpin.webp"
-            loading="lazy"
-            alt="Two friends having fun - Kelowna"
-          />
-        </div>
-        <div class="masonry-item" data-category="couple">
-          <img
-            src="/assets/images/lowerdance.webp"
-            loading="lazy"
-            alt="People dancing - Kelowna"
-          />
-        </div>
-        <div class="masonry-item" data-category="couple">
-          <img
-            src="/assets/images/hairtuck.webp"
-            loading="lazy"
-            alt="Couples photoshoot - Kelowna"
-          />
-        </div>
-        <div class="masonry-item" data-category="couple">
-          <img
-            src="/assets/images/b2bstand.webp"
-            loading="lazy"
-            alt="People standing back to back - Kelowna"
-          />
-        </div>
-        <div class="masonry-item" data-category="couple">
-          <img
-            src="/assets/images/Lift.webp"
-            loading="lazy"
-            alt="Couple doing lift - Kelowna"
-          />
-        </div>
-        <div class="masonry-item" data-category="portrait">
-          <img
-            src="/assets/images/AbiHarlie.webp"
-            loading="lazy"
-            alt="Holding hands walking - Kelowna"
-          />
-        </div>
-        <div class="masonry-item" data-category="portrait">
-          <img
-            src="/assets/images/BNLaugh.webp"
-            loading="lazy"
-            alt="Couple - Kelowna "
-          />
-        </div>
-        <div class="masonry-item" data-category="portrait">
-          <img
-            src="/assets/images/two-white.webp"
-            loading="lazy"
-            alt="Friends - Kelowna "
-          />
-        </div>
-        <div class="masonry-item" data-category="couple">
-          <img
-            src="/assets/images/BNClose.webp"
-            loading="lazy"
-            alt="Couple - Kelowna "
-          />
-        </div>
-      </div>
+      <div class="gallery-masonry" id="galleryGrid"></div>
 
       <!-- LIGHTBOX -->
       <div class="lightbox">
@@ -296,6 +176,152 @@
         <a href="https://linkedin.com/in/benabrey/">Ben Abrey</a>
       </div>
     </footer>
+
+    <script>
+      const galleryPhotos = [
+        {
+          src: "DSC_4089.jpg",
+          alt: "Couple Standing - Kelowna",
+          category: "couple",
+        },
+        {
+          src: "DSC_2823.jpg",
+          alt: "Engaged Couple - Kelowna Engagement",
+          category: "weddings",
+        },
+        {
+          src: "DSC_9269copy.JPG",
+          alt: "Couple - Kelowna",
+          category: "couple",
+        },
+        {
+          src: "DSC_2490.jpg",
+          alt: "Couple Sitting - Kelowna",
+          category: "couple",
+        },
+        {
+          src: "DSC_9913copy.jpg",
+          alt: "Prom Portrait - Kelowna",
+          category: "portrait",
+        },
+        {
+          src: "DSC_1776.jpg",
+          alt: "Couple About to Kiss - Kelowna",
+          category: "couple",
+        },
+        {
+          src: "DSC_4378.jpg",
+          alt: "Engaged Couple Looking at Eachother - Kelowna Proposal",
+          category: "weddings",
+        },
+        {
+          src: "DSC_2218-2.jpg",
+          alt: "Couple Holding Hands - Kelowna",
+          category: "couple",
+        },
+        {
+          src: "DSC_2911.jpg",
+          alt: "Diamond Engagement Ring - Kelowna Proposal",
+          category: "weddings",
+        },
+        {
+          src: "DSC_2959-2.jpg",
+          alt: "Woman in Dress Portrait - Kelowna Portraits",
+          category: "portrait",
+        },
+        {
+          src: "DSC_3609.jpg",
+          alt: "Engaged Couple Walking with an Umbrella - Kelowna Proposal Photos",
+          category: "weddings",
+        },
+        {
+          src: "DSC_1472.jpg",
+          alt: "Couple at the beach - Kelowna",
+          category: "couple",
+        },
+        {
+          src: "DSC_3967.jpg",
+          alt: "Bottom half of couple holding hands - Kelowna",
+          category: "couple",
+        },
+        {
+          src: "DSC_4721.jpg",
+          alt: "Engaged Couple Posing - Kelowna Proposal Photos",
+          category: "weddings",
+        },
+        {
+          src: "DSC_3166.jpg",
+          alt: "Couple About to Kiss - Kelowna",
+          category: "couple",
+        },
+        {
+          src: "DSC_2294.jpg",
+          alt: "Couple Having Fun Together - Kelowna",
+          category: "couple",
+        },
+        {
+          src: "DSC_9458.jpg",
+          alt: "Couple Lifting About to Kiss - Kelowna",
+          category: "couple",
+        },
+        {
+          src: "DSC_0538.jpg",
+          alt: "Woman in Dress on Balcony - Kelowna",
+          category: "portrait",
+        },
+        {
+          src: "DSC_3562-2.jpg",
+          alt: "Couple Dancing Around - Kelowna",
+          category: "couple",
+        },
+        {
+          src: "DSC_1029copy.jpg",
+          alt: "Couple Hugging on the Beach - Kelowna",
+          category: "couple",
+        },
+        {
+          src: "DSC_5146.jpg",
+          alt: "Woman Swinging Her Dress Portrait - Kelowna",
+          category: "portrait",
+        },
+        {
+          src: "DSC_9239-2.jpg",
+          alt: "Couple Having Picnic - Kelowna",
+          category: "couple",
+        },
+        {
+          src: "DSC_1930-2.jpg",
+          alt: "Couple Holding Eachother - Kelowna",
+          category: "couple",
+        },
+        {
+          src: "DSC_2126copy.jpg",
+          alt: "Couple Holding Eachother - Kelowna",
+          category: "couple",
+        },
+        {
+          src: "DSC_2116.jpg",
+          alt: "Couple About to Kiss - Kelowna",
+          category: "couple",
+        },
+      ];
+
+      // Build the masonry grid from the array
+      const grid = document.getElementById("galleryGrid");
+      galleryPhotos.forEach(function (photo) {
+        const item = document.createElement("div");
+        item.className = "masonry-item";
+        item.setAttribute("data-category", photo.category);
+
+        const img = document.createElement("img");
+        img.src = "/assets/images/gallery/" + photo.src;
+        img.alt = photo.alt;
+        img.loading = "lazy";
+
+        item.appendChild(img);
+        grid.appendChild(item);
+      });
+    </script>
 
     <script>
       document.getElementById("current-year").textContent =
