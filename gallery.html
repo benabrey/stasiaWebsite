@@ -82,14 +82,14 @@
 
     <!-- NAV -->
     <nav>
-      <a href="/index" class="nav-logo">Aesthetics By Stasia</a>
+      <a href="/" class="nav-logo">Aesthetics By Stasia</a>
       <button class="nav-toggle" id="navToggle">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/index">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="/gallery" class="active">Gallery</a></li>
         <li><a href="/contact">Contact</a></li>
         <li><a href="/pricing">Pricing</a></li>
@@ -99,7 +99,11 @@
       <!-- HERO -->
       <section class="gallery-page-hero">
         <div class="hero-bg">
-          <img src="/assets/images/stasiaLandscape.webp" alt="Gallery" />
+          <img
+            src="/assets/images/stasiaLandscape-1200.webp"
+            decoding="async"
+            alt="Gallery"
+          />
         </div>
         <div class="hero-content reveal-left">
           <p class="section-label" style="color: var(--stone)">Portfolio</p>
@@ -313,10 +317,14 @@
         item.className = "masonry-item";
         item.setAttribute("data-category", photo.category);
 
+        const base = photo.src.replace(/\.[^.]+$/, "");
+
         const img = document.createElement("img");
-        img.src = "/assets/images/gallery/" + photo.src;
-        img.alt = photo.alt;
         img.loading = "lazy";
+        img.decoding = "async";
+        img.alt = photo.alt;
+        img.src = "/assets/images/gallery/" + base + "-600.webp";
+        img.dataset.full = "/assets/images/gallery/" + base + "-2000.webp";
 
         item.appendChild(img);
         grid.appendChild(item);
