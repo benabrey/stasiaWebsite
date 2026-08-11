@@ -73,6 +73,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
     <link rel="stylesheet" href="/assets/css/styles.min.css" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/assets/images/gallery/DSC_4089-1200.webp"
+    />
   </head>
   <body>
     <!-- Page transition overlay -->
@@ -88,14 +94,14 @@
 
     <!-- NAV -->
     <nav>
-      <a href="/index" class="nav-logo">Aesthetics By Stasia</a>
+      <a href="/" class="nav-logo">Aesthetics By Stasia</a>
       <button class="nav-toggle" id="navToggle">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/index" class="active">Home</a></li>
+        <li><a href="/" class="active">Home</a></li>
         <li><a href="/gallery">Gallery</a></li>
         <li><a href="/contact">Contact</a></li>
         <li><a href="/pricing">Pricing</a></li>
@@ -122,79 +128,47 @@
         <div class="hero-right">
           <div class="hero-slide">
             <img
-              src="/assets/images/gallery/DSC_4089.jpg"
+              src="/assets/images/gallery/DSC_4089-1200.webp"
               style="object-position: center"
+              fetchpriority="high"
+              decoding="async"
               alt="Couple Standing - Kelowna"
             />
           </div>
           <div class="hero-slide">
             <img
-              src="/assets/images/gallery/DSC_2823.jpg"
+              data-src="/assets/images/gallery/DSC_2823-1200.webp"
+              decoding="async"
               alt="Engaged Couple - Kelowna Engagement"
             />
           </div>
           <div class="hero-slide">
             <img
-              src="/assets/images/gallery/DSC_9269copy.JPG"
-              alt="Couple- Kelowna"
+              data-src="/assets/images/gallery/DSC_9269copy-1200.webp"
+              decoding="async"
+              alt="Couple - Kelowna"
             />
           </div>
           <div class="hero-slide">
             <img
-              src="/assets/images/gallery/DSC_2490.jpg"
+              data-src="/assets/images/gallery/DSC_2490-1200.webp"
+              decoding="async"
               alt="Couple Sitting - Kelowna"
             />
           </div>
           <div class="hero-slide">
             <img
-              src="/assets/images/gallery/DSC_9913copy.jpg"
+              data-src="/assets/images/gallery/DSC_9913copy-1200.webp"
+              decoding="async"
               style="object-position: center 10%"
               alt="Prom Portrait - Kelowna"
             />
           </div>
           <div class="hero-slide">
             <img
-              src="/assets/images/gallery/DSC_1776.jpg"
+              data-src="/assets/images/gallery/DSC_1776-1200.webp"
+              decoding="async"
               alt="Couple About to Kiss - Kelowna"
-            />
-          </div>
-          <div class="hero-slide">
-            <img
-              src="/assets/images/gallery/DSC_4378.jpg"
-              style="object-position: center bottom"
-              alt="Engaged Couple Looking at Eachother - Kelowna Proposal"
-            />
-          </div>
-          <div class="hero-slide">
-            <img
-              src="/assets/images/gallery/DSC_2218-2.jpg"
-              alt="Couple Holding Hands - Kelowna"
-            />
-          </div>
-          <div class="hero-slide">
-            <img
-              src="/assets/images/gallery/DSC_2911.jpg"
-              alt="Diamond Engagement Ring - Kelowna Proposal"
-            />
-          </div>
-          <div class="hero-slide">
-            <img
-              src="/assets/images/gallery/DSC_2959-2.jpg"
-              alt="Woman in Dress Portrait - Kelowna Portraits"
-            />
-          </div>
-          <div class="hero-slide">
-            <img
-              src="/assets/images/gallery/DSC_3609.jpg"
-              class="crop-adjust"
-              alt="Engaged Couple Walking with an Umbrella - Kelowna Proposal Photos"
-            />
-          </div>
-          <div class="hero-slide">
-            <img
-              src="/assets/images/gallery/DSC_1472.jpg"
-              style="object-position: center bottom"
-              alt="Couple at the beach - Kelowna"
             />
           </div>
         </div>
@@ -214,8 +188,9 @@
             <a href="gallery?filter=portrait" class="service-item">
               <img
                 class="service-item-img"
-                src="/assets/images/portraits.JPG"
+                src="/assets/images/portraits-600.webp"
                 loading="lazy"
+                decoding="async"
                 alt="Portraits"
               />
               <div class="service-item-overlay"></div>
@@ -229,8 +204,9 @@
             <a href="gallery?filter=couples" class="service-item">
               <img
                 class="service-item-img"
-                src="/assets/images/couplesPhotography.JPG"
+                src="/assets/images/couplesPhotography-600.webp"
                 loading="lazy"
+                decoding="async"
                 alt="Couples"
               />
               <div class="service-item-overlay"></div>
@@ -244,8 +220,9 @@
             <a href="gallery?filter=event" class="service-item">
               <img
                 class="service-item-img"
-                src="/assets/images/weddings.JPG"
+                src="/assets/images/weddings-600.webp"
                 loading="lazy"
+                decoding="async"
                 alt="Weddings"
               />
               <div class="service-item-overlay"></div>
@@ -265,7 +242,12 @@
       <section class="about-section" aria-label="About Stasia">
         <div class="about reveal">
           <div class="about-image-wrap">
-            <img src="/assets/images/Stasia.webp" loading="lazy" alt="Stasia" />
+            <img
+              src="/assets/images/Stasia-600.webp"
+              loading="lazy"
+              deconding="async"
+              alt="Stasia"
+            />
           </div>
           <div class="about-text">
             <p class="section-label">About Me</p>
