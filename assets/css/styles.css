@@ -1483,6 +1483,12 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .service-item-desc,
+  .service-item-arrow {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   .form-row {
     grid-template-columns: 1fr;
   }
